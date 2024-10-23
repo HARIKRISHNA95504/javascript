@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .heading{
+        background-color: aliceblue;
+        color: green;
+        
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <div id="myContainer"></div>
+   
+    <script>
+        let h1Element =document.createElement('h1');
+        h1Element.textContent="Web Technologies"
+        
+        let containerElement =document.getElementById('myContainer');
+        containerElement.appendChild(h1Element);
+
+       let btnElement=document.createElement('button');
+       btnElement.textContent="ChangeHeading"
+       containerElement.appendChild(btnElement);
+
+       btnElement.onclick = function(){
+        h1Element.textContent = "4.0 Technologies"
+        // h1Element.style.color="red"
+        btnElement.textContent ="Changed"
+        h1Element.classList.add("heading");
+       };
+       
+
+       
+
+    </script>
+</body>
+</html>

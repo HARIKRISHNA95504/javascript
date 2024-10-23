@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+ 
+    
+</style>
+<body>
+    <div id="todo-container" class="container border mt-5 w-5/12 ">
+        <!-- <h1 class="text-3xl text-center underline">
+            TODOS
+          </h1>
+          <div class="p-8">
+            <h2 class="font-bold pb-5 pt-10 ">Create Task</h2>
+            <input type="text" placeholder="SearchTODO" class="border">
+            <button class="border p-1 ml-5 bg-blue-500 text-white font-bold-sm  ">Add</button>
+            <div class=" mt-10 border w-3/4      p-2">
+                <input type="checkbox" id="myCheckbox"/>
+                <label for="myCheckbox">First Todo</label>
+                <button class="ml-10 p-1 text-white border bg-red-500">delete</button>
+            </div>
+          </div> -->
+          <div id="todo-items-container">
+
+          </div>
+    </div>
+    <script>
+        //   let inputElement = document.createElement("input")
+        //   inputElement.type = "checkbox"
+        //   inputElement.id = "myCheckbox"
+        //   document.body.appendChild(inputElement)
+
+        // let labelElement = document.createElement("label")
+        // labelElement.htmlFor ="myCheckbox"
+        // labelElement.textContent = "graduated"
+        // document.body.appendChild(labelElement)
+       let todos = document.getElementById("todo-container")
+       todoElement1 =document.createElement("h1")
+      
+       todoElement1.textContent = "TODOS PROCEDURE"
+       todoElement1.classList.add("p-5","font-bold","text-center","text-blue-500")
+    todos.appendChild(todoElement1)
+
+    todoElement2 = document.createElement("h3")
+    todoElement2.textContent = "Create Task :"
+    todoElement2.classList.add("text-red-600", "pl-9","text-lg")
+   todos.appendChild(todoElement2) 
+   
+   todoElement3 = document.createElement("input")
+   todoElement3.placeholder = "enter something"
+   todoElement3.classList.add("border","p-2","ml-6","mt-4","w-6/12")
+   todos.appendChild(todoElement3)
+
+   todoElement4 =document.createElement("button")
+   todoElement4.textContent = "ADD"
+   todoElement4.classList.add("p-2","mt-4", "border","bg-black","text-white","font-bold","ml-6")
+   todos.appendChild(todoElement4)
+
+//     todoItemCheckbox = document.getElementById("todo-items-container")
+//    todos.appendChild(todoItemCheckbox)
+
+//    todoElement5 = document.createElement("input")
+//    todoElement5.type ="checkbox"
+//    todoElement5.classList.add("mt-3","ml-9")
+//    todoItemCheckbox.appendChild(todoElement5)
+
+//    let  todoItems = document.createElement("div")
+//    todoItemCheckbox.appendChild(todoItems)
+
+//    todoElement6 = document.createElement('P')
+//    todoElement6.textContent="learn html"
+//    todoElement6.classList.add("font-bold")
+//    todoItems.appendChild(todoElement6)
+
+let todoItem= document.getElementById("todo-items-container")
+todos.appendChild(todoItem)
+
+todoCheckbox = document.createElement("input")
+todoCheckbox.type = "checkbox"
+todoCheckbox.id = "myCheckbox"
+todoCheckbox.classList.add("mt-3","ml-9")
+todoItem.appendChild(todoCheckbox);
+
+todoTitle = document.createElement("label")
+todoTitle.htmlFor = "myCheckbox"
+todoTitle.textContent = ""
+todoTitle.classList.add("bg-sky-500","text-white","p-auto","w-auto","border","ml-auto","text-lg")
+todoItem.appendChild(todoTitle)
+
+   
+   
+
+
+    
+
+        
+
+        
+
+
+    </script>
+</body>
+</html>

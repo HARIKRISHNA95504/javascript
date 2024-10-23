@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Email</label>
+    <input type="email"/>
+    <label for="">password</label>
+    <input type="password" placeholder="enter password" value=""/>
+    <button onclick="validateCredentials()">sign in</button>
+    <script>
+        var users = [
+            {
+                email:'harikrishna@gmail.com',
+                password:'12345'
+            },
+            {
+                email:'krishna@gmail.com',
+                password:'12345'
+            }
+        ]
+
+        function validateCredentials(){
+            // console.log('hello good morning')
+            var enterEmail = document.getElementById('email').value
+            var enterPassword = document.getElementById('password').value
+
+            var isValid = enterEmail === users[0].email && enterPassword === users[0].password ? 'incorrect email or password':'succes login'
+        }
+    </script>
+</body>
+</html>

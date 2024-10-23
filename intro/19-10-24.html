@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ /* #form-container{
+    text-align: center;
+    justify-content: center;
+    display: block;
+    
+    
+    
+    
+
+ }
+ #field-container{
+    padding: 10px;
+ } */
+ /* input{
+    padding: 10px;
+    width: 20%;
+    margin-top: 1rem;
+    border: 1px solid black;
+    border-radius:5px ;
+ }
+ input:hover{
+    border-color:blue;
+    border: 3px solid blue;
+ } */
+ /* button{
+    padding: 10px;
+    background-color:white;
+    color:brown;
+    text-align: center;
+
+ } */
+ #zoom-container{
+    text-align: center;
+    border: 1px solid black;
+    
+    
+    
+
+}
+input{
+    padding: 10px;
+    width: 20%;
+    margin: 10px;
+}
+button{
+    background-color: red;
+    color: white;
+    padding:10px 20px 10px 20px ;
+    margin-bottom: 10px;
+}
+</style>
+<body>
+    <!-- <div id="form-container">
+        <h1>Sign In</h1>
+       <div id="field-container">
+        <p id="message"></p>
+        <label >Email</label>
+        <input type="text" placeholder="enter your email" id="email"/><br>
+        <label >Password</label>
+        <input type="password" placeholder="enter your password" id="password"/><br>
+       </div>
+        <button onclick="validateCredentials()">Sign In</button>
+        <p id="success"></p>
+    </div> -->
+    <div id="zoom-container">
+        <form>
+            <img src="https://st2.zoom.us/static/6.3.26649/image/new/topNav/Zoom_logo.svg" width="200px" height="100px">
+            <h1>Sign in</h1>
+            <p id="message"></p>
+            <label for="">Email/Mobile:</label>
+            <input type="email" id="email" placeholder="Enter Your Email/Mobile"/><br>
+            <label for="">password :</label>
+            <input type="password" id="password" placeholder="Enter Your Email"/><br>
+            <button onclick="validateCredentials()">Sign In</button>
+        </form>
+    </div>
+    <script>
+       var users = [
+        {
+        email:'hari@gmail.com',
+        password:'1234',
+        mobile:9550451513
+       },
+       {
+        email:'hari111@gmail.com',
+        password:'1111',
+        mobile:9550451513
+       },
+       {
+        email:'hari222@gmail.com',
+        password:2222,
+        mobile:9550451513
+       },
+       {
+        email:'hari333@gmail.com',
+        password:3333,
+        mobile:9550451513
+       }
+    ]
+
+    function validateCredentials(){
+        var EmailorMobile = document.getElementById('email').value
+        var enterPassword = document.getElementById('password').value
+       var  isValid = ((EmailorMobile === users[1].email) || (EmailorMobile === users[1].mobile) )&& (enterPassword === users[1].password) ?  navigateToHomePage() : false;
+
+        document.getElementById('message').innerHTML = isValid === false ? 'incorrect email or mobile or password' :' ';
+
+        
+    }
+
+    function navigateToHomePage(){
+        window.location.href = './18-10-2024.html';
+    }
+
+  
+    </script>
+</body>
+</html>
