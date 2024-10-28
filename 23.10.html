@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<style>
+    #flipkart-actions{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-weight: 300;
+        font-style: italic ;
+    }
+    ul{
+        display: flex;
+        gap: 5rem;
+        text-align: center;
+        justify-content: center;
+        list-style-type: none;
+        cursor: pointer;
+    }
+    li:hover{
+        text-decoration: underline;
+        color:blueviolet;
+
+    }
+</style>
+
+<body>
+    <h1>Control Statements</h1>
+    <h2>1.conditional Statements</h2>
+    <p>1. if 2.ifelse 3.elseif</p>
+    <h1 id="message"></h1>
+    <button onclick="personName()">Submit</button>
+    <div>
+        <h1>Switch Statement</h1>
+        <h2 id="switch-message"></h2>
+        <button onclick="switch_Statement()">switch</button>
+    </div>
+    <!--task-->
+    <div id="flipkart-actions">
+        <h1>Showing 1 – 24 of 10,248 results for "mobiles"</h1>
+        <ul id="select-list">
+            <li onclick="using_switch()">Relavance</li>
+            <li onclick="using_switch()">popularity</li>
+            <li onclick="using_switch()">Price -- Low to High</li>
+            <li onclick="using_switch()">Price -- High to Low</li>
+            <li onclick="using_switch()">Newest First</li>
+        </ul>
+    </div>
+    <div></div>
+    <script>
+        var person = 'Hari'
+        function personName() {
+            if (person === 'ari') {
+                document.getElementById('message').innerHTML = 'condition is true';
+                document.getElementById('message').style.color = 'green'
+            }
+            else {
+                document.getElementById('message').innerHTML = 'Condition  is false';
+                document.getElementById('message').style.color = 'red';
+            }
+        }
+
+
+        var train = 'kurnool'
+        function switch_Statement() {
+
+            switch (train) {
+                case 'kurnool':
+                    // console.log('selected train is kurnoolcity')
+                    document.getElementById('switch-message').innerHTML = 'selected train is kurnool'
+                    document.getElementById('switch-message').style.color = 'orange';
+                    break;
+                case 'hyd':
+                    document.getElementById('switch-message').innerHTML = 'selected train is hyd'
+                    document.getElementById('switch-message').style.color = 'blue';
+                    break;
+                case 'goa':
+                    console.log('selected train is goa')
+                    document.getElementById('switch-message').innerHTML = 'selected train is goa'
+                    document.getElementById('switch-message').style.color = 'green';
+                    break;
+                default:
+                    document.getElementById('switch-message').innerHTML = 'default train is KACHEGUDA TO GUNTUR'
+                    document.getElementById('switch-message').style.color = 'Red';
+
+            }
+        }
+       
+
+
+    </script>
+</body>
+
+</html>

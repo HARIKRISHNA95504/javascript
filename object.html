@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var user = {
+        name:'hari',
+        desig:'software',
+        salary:40000
+       }
+       console.log(user)
+       var userkeys = Object.keys(user)
+       console.log(userkeys)
+       var userValues = Object.values(user)
+       console.log(userValues)
+
+       var userEntries = Object.entries(user)
+       console.log(userEntries)
+
+       var copieduser = Object.assign({},user)
+       console.log(copieduser)
+       copieduser.name = 'shiva'
+       console.log(copieduser)
+
+    //    var freezeduser = Object.freeze(user)
+    //    console.log(freezeduser)
+
+    //    freezeduser.name = 'hari'
+    //    console.log(freezeduser)
+
+    var sealuser = Object.seal(user)
+    user.salary = 48000
+    console.log(sealuser)
+    sealuser.location = 'hyderabad';
+    console.log(sealuser)
+
+    var employee = {}
+    Object.defineProperty(employee,'name',{
+        value : 'krishna',
+        writable :false
+
+    })
+    console.log(employee)
+
+    Object.defineProperty(employee,'salary',{
+        value:85732,
+        writable:true
+    })
+    console.log(employee)
+
+   
+
+
+       
+       
+    </script>
+</body>
+</html>

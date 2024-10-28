@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #profile{
+        border: 1px solid gray;
+        border-radius: 2px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0,0, 0, 0.1);
+        background-color: white;
+        font-size: 20px;
+        width: 90%;
+        
+    }
+    img{
+        width: 100%;
+    }
+    #profile-container{
+        display: grid;
+        grid-template-columns: auto auto auto  auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 2rem;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div id="profile-container">
+        
+    </div>
+    <script>
+        var profiles = [
+            {
+                imgSrc : 'https://tse2.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gHaHa&pid=Api&P=0&h=180',
+                name:'Rishik',
+                registerNo:98657,
+                roll:'software Engineer',
+                blood:'B+',
+                phone:9550452523,
+                org:'deloitee'
+            },
+            {
+                imgSrc : 'https://tse2.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gHaHa&pid=Api&P=0&h=180',
+                name:'Harikrishna',
+                registerNo:98657,
+                roll:'software Engineer',
+                blood:'B-',
+                phone:9550452523,
+                org:'deloitee',
+                city:'kurnool'
+            },
+            {
+                imgSrc : 'https://tse2.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gHaHa&pid=Api&P=0&h=180',
+                name:'Rajesh',
+                registerNo:98657,
+                roll:'software Engineer',
+                blood:'O+',
+                phone:9550452523,
+                org:'deloitee',
+                city:'hyd'
+            },
+            {
+                imgSrc : 'https://tse2.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gHaHa&pid=Api&P=0&h=180',
+                name:'Narayan',
+                registerNo:98657,
+                roll:'software Engineer',
+                blood:'B-',
+                phone:9550452523,
+                org:'deloitee',
+                city:'hyd'
+            },
+            
+            {
+                imgSrc : 'https://tse2.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gHaHa&pid=Api&P=0&h=180',
+                name:'Vennela',
+                registerNo:98657,
+                roll:'software Engineer',
+                blood:'O+',
+                phone:9550452523,
+                org:'deloitee',
+                city:'guntur'
+            },
+            {
+                imgSrc : 'https://tse2.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gHaHa&pid=Api&P=0&h=180',
+                name:'Yashwanth',
+                registerNo:98657,
+                roll:'software Engineer',
+                blood:'B+',
+                phone:9550452523,
+                org:'deloitee',
+                city:'goa'
+            }
+        ]
+
+        var filterProfiles = []
+        for( i=0;profiles.length;i++){
+            if(profiles[i].city === 'goa'){
+                filterProfiles.push(profiles)
+            }
+        }
+        console.log(filterProfiles)
+        
+        var profileStr = []
+        for( var i = 0; i<filterProfiles.length;i++){
+           profileStr +=`
+           <div id="profile">
+            <img src="${filterProfiles[i].imgSrc}"/>
+            <h5 class="name">Name : ${filterProfiles[i].name} </h5>
+            <p class="registerNo">RegisterNo : ${filterProfiles[i].registerNo}</p>
+            <p class="roll">Role : ${filterProfiles[i].roll} </p>
+            <p class="blood-group">Blood-Group : ${filterProfiles[i].blood} </p>
+            <p class="phone">Phone : ${filterProfiles[i].phone} </p>
+            <p class="company">Org : ${filterProfiles[i].org} </p>
+        </div>
+           `
+        }
+        document.getElementById('profile-container').innerHTML = profileStr;
+    </script>
+</body>
+</html>
