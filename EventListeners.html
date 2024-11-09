@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- <button id="">GREET</button> -->
+        <!-- <input type="text" id="defuse"/>
+        <h1>BOMB FIXED</h1>
+        <p id="timer"></p> -->
+
+
+        <!-- <button id="greetbtn">GREETING</button>
+        <p id="greetings"></p> -->
+
+        <!-- <button id="greet-btn">GREET</button> -->
+        <input id="textIn"/>
+
+        <script>
+            // let greetBtnEle = document.getElementById('greetbtn')
+            // greetBtnEle.onclick = function(){
+                
+            //     document.getElementById('greetings').innerHTML = "hello rahul how are you"
+            // }
+            
+            // let greetbutton = document.getElementById('greet-btn')
+            // greetbutton.addEventListener('click',function(){
+            //     console.log('it is a addeventlistener of greetings')
+            // })
+
+            let inputElement = document.getElementById('textIn')
+            inputElement.addEventListener('keydown',function(event){
+                console.log(event.key)
+                // console.log(event.type)
+                // console.log(event.target)
+
+            })
+
+            // let inputElement = document.getElementById('textIn')
+            // inputElement.addEventListener('keyup',function(event){
+            //     console.log(event.key)
+            //     // console.log(event.type)
+            //     // console.log(event.target)
+
+            // })
+
+        
+            //  let timerEl = document.getElementById('timer')
+            //  let difuseEltext = document.getElementById('defuse')
+            //  let countDown = 10;
+            //  let intervalId = setInterval(function(){
+            //      countDown = countDown -1;
+            //      timerEl.textContent = countDown;
+            //      if(countDown === 0){
+            //         timerEl.textContent = "BOOOOOOOOM........";
+            //         clearInterval(intervalId)
+            //      }
+            //  },1000)
+            
+            //  difuseEltext.addEventListener('keydown',function(event){
+            //     let bombdiffuserText = difuseEltext.value;
+            //     if(event.key ==="Enter" && bombdiffuserText ==="difuse" && countDown !==0){
+            //         timerEl.textContent = "you did ittttt.....!!"
+            //         clearInterval(intervalId)
+            //     }
+            //  })
+
+
+        </script>
+</body>
+</html>
