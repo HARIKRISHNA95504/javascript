@@ -10,6 +10,44 @@
     <button id="setinterval-btn">SetInterval</button>
     <button id="clearinterval-btn">ClearInterval</button>
     <script>
+        // Passing a function as an argument
+         function displayGreeting(displayName){
+            console.log('Hello')
+            displayName();
+            console.log('goodMorning....')
+         }
+         displayGreeting(function(){
+            console.log('Rahul..')
+         })
+
+         console.log('')
+
+        //  Passing a function name as an argument
+        function displayGreeting(displayName){
+            console.log('hello')
+            displayName();
+            console.log('goodEvening...')
+        }
+        let  display = function(){
+            console.log('hari')
+        }
+        displayGreeting(display);
+       
+        console.log('')
+        // Passing a function expression as an argument
+        function displayGreeting(displayName){
+            console.log('hello')
+            displayName();
+            console.log('goodAfternoon....')
+        }
+        
+        function displayKrishna(){
+            console.log('Krishna')
+        }
+
+        displayGreeting(displayKrishna)
+
+         
         let setintervalbtn = document.getElementById('setinterval-btn')
         let clearintervalbtn = document.getElementById('clearinterval-btn')
           
