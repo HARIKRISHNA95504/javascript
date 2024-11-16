@@ -12,6 +12,17 @@
         width: 50%;
         font-size: 20px;
     }
+    #view{
+        color: #fff;
+        background-color: green;
+        padding: 5px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 10rem;
+        border: none;
+        border-radius: 3px ;
+        text-align: center;
+    }
 </style>
 <body>
     <h1>ADD USER</h1>
@@ -45,6 +56,8 @@
         <button type="submit" class="btn btn-primary mt-4">Submit</button>
         
     </form>
+    <button id="view" onclick="viewForm()">ViewDetails</button>
+
     <script>
         let myFormEl = document.getElementById('myForm')
     let formData = {
@@ -139,6 +152,25 @@
         submitForm(formData)
        })
        
+        function viewForm(){
+            let opt={
+                method:'GET',
+                headers:{
+                    "Content-Type":'application/json',
+                    Accept:'application/json',
+                    Authorization:'Bearer f8e08e37f69a419426f2cb4142e712adc731aadf398371272fd0c05b815af051  '
+                }
+
+            }
+            let url = 'https://gorest.co.in/public-api/users'
+            fetch(url,opt)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(jsonData){
+                console.log(jsonData)
+            })
+        }
 
     </script>
     
